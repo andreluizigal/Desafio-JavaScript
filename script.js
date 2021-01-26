@@ -16,9 +16,9 @@ request.onload = function() {
   novo = true;
 
   // Adicionando klayton inicial
-  var klayton = new Image (300, 300);
-  klayton.src = 'images/inicio.png'
-  document.getElementById('resultado').appendChild(klayton);
+  var klay = new Image (300, 300);
+  klay.src = 'images/inicio.png'
+  document.getElementById('resultado').appendChild(klay);
 }
 
 
