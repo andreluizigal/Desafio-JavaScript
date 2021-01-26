@@ -52,3 +52,7 @@ body {
   button:hover {
     background-color: rgb(100,255,125);
   }
+
+  #proxima {
+    display: none;
+  }
