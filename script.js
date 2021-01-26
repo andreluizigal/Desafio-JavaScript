@@ -1,7 +1,7 @@
 var novo = true;
 var next = false;
 var pontos = 0;
-
+var q = 0;
 
 
 // Função executada ao clicar no botão Começar
@@ -34,9 +34,8 @@ function mostrarQuestao() {
       document.getElementById("listaRespostas").style.display = 'block';
       
       // Escrevendo questões
+      var q = 0;
         // Questão 1
-
-          var q = 0;
           // Atribuindo nomes às respostas
           document.getElementById("titulo").innerHTML = questoes[q].title;
           document.getElementsByTagName("span")[0].innerHTML = questoes[q].options[0].answer;
@@ -49,50 +48,154 @@ function mostrarQuestao() {
           document.getElementsByTagName("input")[1].value = questoes[q].options[1].value;
           document.getElementsByTagName("input")[2].value = questoes[q].options[2].value;
           document.getElementsByTagName("input")[3].value = questoes[q].options[3].value;
-
+          
+          console.log("Questão 1");
           // Mudando de questão caso tenha marcado algum item e pressionado o botao.
           if(proximaQuestao()){
             q++;
 
             // Somando pontuação
             for (let i = 0; i < 4; i++) {
-            pontos += document.getElementsByTagName("input")[i].value;
-          } 
-          
+              if(document.getElementsByTagName("input")[i].checked){
+                pontos += document.getElementsByTagName("input")[i].value;
+              }
+            }
+            
+            // Questão 2
+            // Atribuindo nomes às respostas
+            document.getElementById("titulo").innerHTML = questoes[q].title;
+            document.getElementsByTagName("span")[0].innerHTML = questoes[q].options[0].answer;
+            document.getElementsByTagName("span")[1].innerHTML = questoes[q].options[1].answer;
+            document.getElementsByTagName("span")[2].innerHTML = questoes[q].options[2].answer;
+            document.getElementsByTagName("span")[3].innerHTML = questoes[q].options[3].answer;
+            
+            // Atribuindo valores às respostas
+            document.getElementsByTagName("input")[0].value = questoes[q].options[0].value;
+            document.getElementsByTagName("input")[1].value = questoes[q].options[1].value;
+            document.getElementsByTagName("input")[2].value = questoes[q].options[2].value;
+            document.getElementsByTagName("input")[3].value = questoes[q].options[3].value;
+
+            console.log("Questão 2");
+            // Mudando de questão caso tenha marcado algum item e pressionado o botao.
+            if(proximaQuestao()){
+              q++;
+
+              // Somando pontuação
+              for (let i = 0; i < 4; i++) {
+                if(document.getElementsByTagName("input")[i].checked){
+                  pontos += document.getElementsByTagName("input")[i].value;
+                }
+              }
+              // Questão 3
+              // Atribuindo nomes às respostas
+              document.getElementById("titulo").innerHTML = questoes[q].title;
+              document.getElementsByTagName("span")[0].innerHTML = questoes[q].options[0].answer;
+              document.getElementsByTagName("span")[1].innerHTML = questoes[q].options[1].answer;
+              document.getElementsByTagName("span")[2].innerHTML = questoes[q].options[2].answer;
+              document.getElementsByTagName("span")[3].innerHTML = questoes[q].options[3].answer;
+              
+              // Atribuindo valores às respostas
+              document.getElementsByTagName("input")[0].value = questoes[q].options[0].value;
+              document.getElementsByTagName("input")[1].value = questoes[q].options[1].value;
+              document.getElementsByTagName("input")[2].value = questoes[q].options[2].value;
+              document.getElementsByTagName("input")[3].value = questoes[q].options[3].value;
+
+              console.log("Questão 3");
+              // Mudando de questão caso tenha marcado algum item e pressionado o botao.
+              if(proximaQuestao()){
+                q++;
+
+                // Somando pontuação
+                for (let i = 0; i < 4; i++) {
+                  if(document.getElementsByTagName("input")[i].checked){
+                    pontos += document.getElementsByTagName("input")[i].value;
+                  }
+                }
+                
+                // Questão 4
+                // Atribuindo nomes às respostas
+                document.getElementById("titulo").innerHTML = questoes[q].title;
+                document.getElementsByTagName("span")[0].innerHTML = questoes[q].options[0].answer;
+                document.getElementsByTagName("span")[1].innerHTML = questoes[q].options[1].answer;
+                document.getElementsByTagName("span")[2].innerHTML = questoes[q].options[2].answer;
+                document.getElementsByTagName("span")[3].innerHTML = questoes[q].options[3].answer;
+                
+                // Atribuindo valores às respostas
+                document.getElementsByTagName("input")[0].value = questoes[q].options[0].value;
+                document.getElementsByTagName("input")[1].value = questoes[q].options[1].value;
+                document.getElementsByTagName("input")[2].value = questoes[q].options[2].value;
+                document.getElementsByTagName("input")[3].value = questoes[q].options[3].value;
+
+                console.log("Questão 4");
+                // Mudando de questão caso tenha marcado algum item e pressionado o botao.
+                if(proximaQuestao()){
+                  q++;
+
+                  // Somando pontuação
+                  for (let i = 0; i < 4; i++) {
+                    if(document.getElementsByTagName("input")[i].checked){
+                      pontos += document.getElementsByTagName("input")[i].value;
+                    }
+                  }
+                  
+                  // Questão 5
+                  // Atribuindo nomes às respostas
+                  document.getElementById("titulo").innerHTML = questoes[q].title;
+                  document.getElementsByTagName("span")[0].innerHTML = questoes[q].options[0].answer;
+                  document.getElementsByTagName("span")[1].innerHTML = questoes[q].options[1].answer;
+                  document.getElementsByTagName("span")[2].innerHTML = questoes[q].options[2].answer;
+                  document.getElementsByTagName("span")[3].innerHTML = questoes[q].options[3].answer;
+                  
+                  // Atribuindo valores às respostas
+                  document.getElementsByTagName("input")[0].value = questoes[q].options[0].value;
+                  document.getElementsByTagName("input")[1].value = questoes[q].options[1].value;
+                  document.getElementsByTagName("input")[2].value = questoes[q].options[2].value;
+                  document.getElementsByTagName("input")[3].value = questoes[q].options[3].value;
+                  
+                  console.log("Questão 5");
+                  // Mudando de questão caso tenha marcado algum item e pressionado o botao.
+                  if(proximaQuestao()){
+                    // Somando pontuação
+                    for (let i = 0; i < 4; i++) {
+                      if(document.getElementsByTagName("input")[i].checked){
+                        pontos += document.getElementsByTagName("input")[i].value;
+                      }
+                    }
+                    
+                    // Finalizando quiz
+                    finalizarQuiz(pontos);
+                  }
+                }
+              }
+            }
           }
-
-
-
-
-      // Fazendo o botao 'confirmar' mudar para 'Refazer quiz'
-      document.getElementById("confirmar").innerHTML = 'Refazer quiz'; 
-      
-
+      finalizarQuiz(pontos);    
     }
-
-
-    // Encerra o quiz
-    novo = false;
   }
-
-
 }
 
+// Checa se é possivel avançar para proxima questão
 function proximaQuestao(){
   if(novo){
     var marcado = false;
     for (let m = 0; m < 4; m++) {
       if(document.getElementsByTagName("input")[m].checked){
         marcado = true;
+        console.log('marcado');
       }
-      
     }
   }
-
 }
 
 
-function finalizarQuiz() {
-    
+function finalizarQuiz(p) {
+  // Exibindo pontuação
+  document.getElementById("resultado").innerHTML = "Sua pontuação: " + 100*p/15 + "%";
+  
+  // Fazendo o botao 'próxima' mudar para 'Refazer quiz'
+  document.getElementById("confirmar").innerHTML = 'Refazer quiz';
+  
+  // Mudando status de quiz em andamento
+  novo = true;
 }
 
